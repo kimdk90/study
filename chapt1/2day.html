@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X,Y 좌표</title>
+</head>
+<body>
+    <pre>
+    js  bottom은 위에서 부터 가장 아래 right는 왼쪽에서 부터 가장 오른쪽
+    css bottom은 아래에서 가장 아래 right는 오른쪽에서 가장 오른쪽
+    </pre>
+
+    <h1 id="XY"> </h1>
+    <script>
+        const xy = document.querySelector("#XY");
+
+
+        function mouseClick(e) {
+            const rect = xy.getBoundingClientRect();
+            console.log(rect);
+            const clintX = e.clientX;
+            const clintY = e.clientY;
+            const cursorX = e.pageX;
+            const cursorY = e.pageY;
+            
+            xy.innerHTML = `clint X : ${clintX} Y : ${clintY} <br/> 페이지 x : ${cursorX} Y : ${cursorY}`
+        };
+
+        window.addEventListener("click", mouseClick);
+    </script>
+</body>
+</html>
