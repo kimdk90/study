@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: black;
+        }
+
+        button {
+            width: 100px;
+            height: 50px;
+        }
+        div{
+            width:  250px;
+            height: 250px;
+            background-color: lightsalmon;
+            margin-bottom: 4px;
+            border-radius: 4px;
+        }
+
+        #div_btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+
+        #special{
+            background-color:  skyblue;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <aside id = "div_btn"> 
+    <button id = "btn1"> 화면에서 100</button>
+    <button id = "btn2"> 상단에서 100</button>
+    <button id = "btn3"> 스페셜</button>
+    </aside>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div id = "special"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+        const btn1 = document.querySelector("#btn1");
+        const btn2 = document.querySelector("#btn2");
+        const btn3 = document.querySelector("#btn3");
+        const special = document.querySelector("#special");
+
+        btn1.addEventListener("click", () => {
+            window.scrollBy(0, 100);
+        });
+
+        btn2.addEventListener("click", () => {
+            window.scrollTo(0, 100);
+        });
+
+        btn3.addEventListener("click", () => {
+            special.scrollIntoView();
+        });
+
+    </script>
+</body>
+</html>
