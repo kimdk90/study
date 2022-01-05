@@ -1,0 +1,35 @@
+#btn {
+    position: relative;
+    left: 50%;
+}
+
+div{
+    position: relative;
+    left: 47%;
+    width: 200px;
+    height: 200px;
+    border: 1px solid yellow;
+}
+
+.carrot {
+    /* 1. background-image 에 원하는 이미지의 경로를 적는다.
+    2. 비율을 맞춰서 넣으려면 background-size: contain 을 준다.
+    (이 예시는 contain 이지만, div 에 꽉차게 넣으려면 background-size: cover 를 주면 된다. 단, 비율이 깨질 수도 있음.)  
+    3. div 사이즈보다 이미지가 작은 경우, 이미지가 반복되므로 한 장만 보여주기 위해 background-repeat: no-repeat
+    4. 가운데 정렬을 위해 background-position: center */
+    background-image: url('carrot.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}   
+
+.rabbit {
+    background-image: url('rabbit.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}   
+
+body {
+    background-color: black;
+}
